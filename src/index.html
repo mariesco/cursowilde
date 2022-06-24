@@ -1,4 +1,31 @@
 <body>
-  <h1>curso de sadasdqcsddfsawilde</h1>
-  <p>p de cierre</p>
+
+  <p id="bienvenida">
+  - Bienvenido Chino!!!
+  </p>
+
+  <a id="btnIngreso" href="./login.html"> Ingresar </a>
+
+
+
+  <script>
+    var miStorage = window.localStorage;
+    var existeUsuario = miStorage.getItem('usuario')
+
+    console.log(existeUsuario);
+
+    if(existeUsuario === null){
+        var textoDeBienvenida = document.getElementById('bienvenida'); 
+        textoDeBienvenida.style.display = 'none';
+
+        console.log('No existe ningun usuario')
+    } else {
+      console.log('El usuario ingresado es:', 'QUIEN')
+    }
+
+  </script>
+
+
 </body>
+
+
